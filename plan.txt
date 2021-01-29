@@ -25,9 +25,9 @@ Buisness name/pizza constructor object (ORDER)
          |
      firstName
      lastName
-    cartTotal=0
      pizzaSize
    pizzaToppings
+    cartTotal=0
          |
          |
       Methods
