@@ -10,61 +10,47 @@
 <body>
   <div class="container">
     <center><h1>Pizza Parlor</h1></center>
-    <br>
     <center><form id="pizzaParlor">
-      <div class="firstName">
-        <label for="firstName">First Name</label>
-        <input type="text" id=firstName>
-      </div>
-      <div class="lastName">
-        <label for="lastName">Last Name</label>
-        <input type="text" id=lastName>
-      </div>
-
-      <div class="radio">
-        <label>
-          <h2>Pepperoni</h2>
-          <input type="radio" name="toppingsOne" value="1" checked>
-          add for $1.00
+      <div class ="order-entry">  
+        <div class="firstName">
+          <label for="firstName">First Name</label>
+          <input type="text" id=firstName>
+        </div>
+        <div class="lastName">
+          <label for="lastName">Last Name</label>
+          <input type="text" id=lastName>
+        </div>
+        <div class="radio">
+          <label>
+            <h2>Pepperoni</h2>
+            <input type="radio" name="toppingsOne" value="1" checked>
+            add for $1.00
+            </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="toppingsOne" value="0">
+            no thanks
           </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="toppingsOne" value="0">
-          no thanks
-        </label>
-      </div>
-    <br>
-      <div class="radio">
-        <label>
-          <h2>Sausage</h2>
-          <input type="radio" name="toppingsTwo" value="1" checked>
-          add for $1.00
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="toppingsTwo" value="0">
-          no thanks
-        </label>
-      </div>
-    <br>
-      <div>
-        <center><button type="submit" class="btn btn-danger">Checkout</button></center>
-      </div>  
-    </form></center> 
-    <br>
-  </div>
-  <div class="response">
-    <div id="nineteen">
-      <p>Your Total Price Is $19</p>
-    </div>
-    <div id="eighteen">
-      <p>Your Total Price Is $18</p>
-    </div>
-    <div id="seventeen">
-      <p>Your Total Price Is $17</p>
-    </div>
+        </div>
+        <div class="radio">
+          <label>
+            <h2>Sausage</h2>
+            <input type="radio" name="toppingsTwo" value="1" checked>
+            add for $1.00
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="toppingsTwo" value="0">
+            no thanks
+          </label>
+        </div>
+        <div>
+          <center><button type="submit" class="btn btn-danger">Checkout</button></center>
+        </div> 
+      </div>   
+    </form></center>
     <div id="show-cart">
       <p>First Name: <span class="show-cart-first"></span></p>
       <p>Last Name: <span class="show-cart-last"></span></p>
