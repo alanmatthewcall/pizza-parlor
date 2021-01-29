@@ -1,0 +1,43 @@
+PIZZA-PARLOR
+
+Buisness name/pizza constructor object (ORDER)
+  
+  PROPERTIES:
+    
+    - firstName
+    - lastName
+    - Size
+    - Toppings
+    - cartTotal
+  
+  METHODS:
+    
+    - Fullname
+    - Checkout?
+
+
+
+
+       Pizza
+         |
+         |
+     Properties          
+         |
+     firstName
+     lastName
+    cartTotal=0
+     pizzaSize
+   pizzaToppings
+         |
+         |
+      Methods
+         |
+      fullName 
+   checkoutTotal
+  
+
+
+
+           
+
+
