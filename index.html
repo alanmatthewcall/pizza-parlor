@@ -14,36 +14,31 @@
     <center>
       <h1>Pizza Parlor</h1>
     </center>
-    <center>
-      <form id="pizzaParlor">
-        <div class="order-entry">
-          <div class="radio">
-            <label>
-              <h2>Pizza Size</h2>
-              <input type="radio" name="pizza-size" value="large" checked>
-              Large
-              <input type="radio" name="pizza-size" value="small" checked>
-              Small
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="pizza-toppings" value="pepperoni">
-              <h3>Pepperoni</h3>
-              <input type="radio" name="pizza-toppings" value="sausage">
-              <h3>Sausage</h3>
-            </label>
-          </div>
-          <div>
-            <center><button type="submit" class="btn btn-danger">Checkout</button></center>
-          </div>
+    <form id="pizzaParlor">
+      <div class="order-entry">
+        <div class="radio">
+          <label>
+            <h2>Pizza Size</h2>
+            <input type="radio" name="pizza-size" value="large" checked>
+            <h3>Large</h3>
+            <input type="radio" name="pizza-size" value="small" checked>
+            <h3>Small</h3>
+          </label>
         </div>
-      </form>
+        <div class="radio">
+          <label>
+            <input type="radio" name="pizza-toppings" value="pepperoni">
+            <h3>Pepperoni</h3>
+            <input type="radio" name="pizza-toppings" value="sausage">
+            <h3>Sausage</h3>
+          </label>
+        </div>
+        <center><button type="submit" class="btn btn-danger">Checkout</button></center>
+      </div>
+    </form>
     </center>
-    <div id="show-cart">
-      <p>First Name: <span class="show-cart-first"></span></p>
-      <p>Last Name: <span class="show-cart-last"></span></p>
-      <p>Total: <span class="show-cart-total"></span></p>
+    <div>
+      <h3>Order Total: $<span class="cartTotal"></span></h3>
     </div>
   </div>
 </body>

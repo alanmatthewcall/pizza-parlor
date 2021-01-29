@@ -1,10 +1,7 @@
 
 //Buiness Logic
 
-let topping1 = 1;
-let topping2 = 1;
-
-function Order(pizzaToppings, pizzaSize) {
+function Order(pizzaSize, pizzaToppings) {
   this.pizzaSize = pizzaSize;
   this.pizzaToppings = pizzaToppings;
   this.cartTotal = 0;
@@ -15,11 +12,13 @@ Order.prototype.topping = function (toppings) {
 }
 
 Order.prototype.checkoutTotal = function () {
-  if (this.pizzaSize === "12inch") {
+  if (this.pizzaSize === "small") {
     this.cartTotal += 12;
-  } else if (this.pizzaSize === "14inch") {
+  } else if (this.pizzaSize === "large") {
     this.cartTotal += 16;
-  } if (this.pizzaToppings.includes("pepperoni")) {
+  };
+
+  if (this.pizzaToppings.includes("pepperoni")) {
     this.cartTotal += 1;
   } if (this.pizzaToppings.includes("sausage")) {
     this.cartTotal += 1;
@@ -34,14 +33,14 @@ Order.prototype.checkoutTotal = function () {
 $(document).ready(function () {
   $("#pizzaParlor").submit(function (event) {
     event.preventDefault();
-
-    const sizePizza = parseInt($("input:radio[name=pizzaSize]:checked").val();
+    const pizzaSizeChoice = $("input:radio[name=pizza-size]:checked").val();
     let pizzaToppingsChoice = [];
     let newOrder = new Order(pizzaSizeChoice, pizzaToppingsChoice);
-
-
-    let toppingsChoice = parseInt($("input:radio[name=pizzaToppings]:checked").val();
-
+    $("input:checkbox[name=pizza-toppings]:checked").each(function () {
+      let toppingChoice = $(this).val();
+      newOrder.topping(toppingChoice);
+    });
+    $("span.cartTotal").html(finalOrder.checkoutTotal());
   });
 });
 
