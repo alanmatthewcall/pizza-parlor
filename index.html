@@ -9,9 +9,18 @@
 </head>
 <body>
   <div class="container">
-    <h1>Pizza Parlor</h1>
+    <center><h1>Pizza Parlor</h1></center>
     <br>
     <center><form id="pizzaParlor">
+      <div class="firstName">
+        <label for="firstName">First Name</label>
+        <input type="text" id=firstName>
+      </div>
+      <div class="lastName">
+        <label for="lastName">Last Name</label>
+        <input type="text" id=lastName>
+      </div>
+
       <div class="radio">
         <label>
           <h2>Pepperoni</h2>
@@ -56,6 +65,11 @@
     <div id="seventeen">
       <p>Your Total Price Is $17</p>
     </div>
+    <div id="show-cart">
+      <p>First Name: <span class="show-cart-first"></span></p>
+      <p>Last Name: <span class="show-cart-last"></span></p>
+      <p>Total: <span class="show-cart-total"></span></p>
+    </div> 
   </div>
 </body>
 </html>
