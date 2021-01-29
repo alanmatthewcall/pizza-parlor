@@ -5,35 +5,44 @@ let topping1 = 1;
 let topping2 = 1;
 
 function Order(pizzaToppings, pizzaSize) {
-  this.pizzaToppings = pizzaToppings ["topping1", "topping2"];
   this.pizzaSize = pizzaSize;
+  this.pizzaToppings = pizzaToppings;
   this.cartTotal = 0;
-}  
-
-
-
-Order.prototype.fullName = function() {
-  return this.firstName + " " + this.lastName;
 }
 
-Order.prototype.checkoutTotal = function() {
-  totalCost = cartTotal + this.pizzaToppings;
-  return fullName + " Your Total Is " + totalCost +  " Please Click Submit To Complete Your Order";
+Order.prototype.topping = function (toppings) {
+  this.pizzaToppings.push(toppings);
+}
+
+Order.prototype.checkoutTotal = function () {
+  if (this.pizzaSize === "12inch") {
+    this.cartTotal += 12;
+  } else if (this.pizzaSize === "14inch") {
+    this.cartTotal += 16;
+  } if (this.pizzaToppings.includes("pepperoni")) {
+    this.cartTotal += 1;
+  } if (this.pizzaToppings.includes("sausage")) {
+    this.cartTotal += 1;
+  };
+  return this.cartTotal;
 };
+
+
 
 // UI Logic
 
 $(document).ready(function () {
-  $("#pizzaParlor").submit(function(event) {
+  $("#pizzaParlor").submit(function (event) {
     event.preventDefault();
-    const this.firstName = $("input#firstName").val();
-    const this.lastName = $("input#lastName").val();
-    const toppingsOne = parseInt($("input:radio[name=creative]:checked").val());
-    const toppingsTwo = parseInt($("input:radio[name=design]:checked").val());
-    let newOrder = new Order(fullName, totalCost)
-    $("#show-cart").show();
+
+    const sizePizza = parseInt($("input:radio[name=pizzaSize]:checked").val();
+    let pizzaToppingsChoice = [];
+    let newOrder = new Order(pizzaSizeChoice, pizzaToppingsChoice);
+
+
+    let toppingsChoice = parseInt($("input:radio[name=pizzaToppings]:checked").val();
+
   });
 });
 
 
-  
