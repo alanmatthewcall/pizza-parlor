@@ -9,10 +9,6 @@ function Order(firstName, lastName,) {
   this.tax = 1;
 }  
 
-const toppings1 = 1;
-const toppings2 = 1;
-
-
 Order.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }
@@ -23,15 +19,24 @@ Order.prototype.checkoutTotal = function() {
 
 // UI Logic
 
-$(document).ready(function() {
-  $("form#pizzaParlor").submit(function(event) {
-    event.preventDefault();
-    const inputtedPlayer1 = $("input#player1").val();
-    const inputtedPlayer2 = $("input#player2").val();
+$(document).ready(function () {
+  $("#pizzaParlor").submit(function (event) {
+    $("#nineteen").hide();
+    $("#eighteen").hide(); 
+    $("#seventeen").hide();
+    const toppingsOne = parseInt($("input:radio[name=creative]:checked").val());
+    const toppingsTwo = parseInt($("input:radio[name=design]:checked").val());
     
-  })
-})
-
+    event.preventDefault();
+    if (toppingsOne + toppingsTwo === 2) {
+      $("#nineteen").show();
+    } else if (toppingsOne + toppingsTwo === 1) {
+      $("#eighteen").show();
+    } else (toppingsOne + toppingsTwo === 0) {
+      $("#seventeen").show();
+    }
+  });
+});
 
 
   
