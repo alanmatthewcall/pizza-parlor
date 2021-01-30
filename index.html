@@ -12,35 +12,33 @@
 <body>
   <div class="container">
     <center>
-      <h1>Pizza Parlor</h1>
+      <h1 class="name">Andys Pizza</h1>
     </center>
     <form id="pizzaParlor">
       <div class="order-entry">
         <div class="radio">
           <label>
-            <h2>Pizza Size</h2>
-            <input type="radio" name="pizza-size" value="large" checked>
-            <h3>Large</h3>
-            <input type="radio" name="pizza-size" value="small" checked>
-            <h3>Small</h3>
+            <input class="selector" type="radio" name="pizza-size" value="large" checked>
+            <h3>Large $16</h3>
+            <input class="selector" type="radio" name="pizza-size" value="small" checked>
+            <h3>Small $12</h3>
           </label>
         </div>
-        <div class="radio">
+        <div class="checkbox">
           <label>
-            <input type="radio" name="pizza-toppings" value="pepperoni">
-            <h3>Pepperoni</h3>
-            <input type="radio" name="pizza-toppings" value="sausage">
-            <h3>Sausage</h3>
+            <input class="selector" type="checkbox" name="pizza-toppings" value="pepperoni">
+            <h3>Pepperoni $1</h3>
+            <input class="selector" type="checkbox" name="pizza-toppings" value="sausage">
+            <h3>Sausage $1</h3>
           </label>
         </div>
-        <center><button type="submit" class="btn btn-danger">Checkout</button></center>
+        <button type="submit" class="btn btn-danger">Total</button>
+      </div>
+      <div>
+        <h3 class="total">Order Total: $<span class="cartTotal"></span></h3>
       </div>
     </form>
     </center>
-    <div>
-      <h3>Order Total: $<span class="cartTotal"></span></h3>
-    </div>
   </div>
 </body>
-
 </html>

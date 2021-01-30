@@ -1,15 +1,16 @@
-#nineteen {
-  display: none;
+.name {
+  margin-top: 50px;
 }
 
-#eighteen {
-  display: none;
+h3 {
+  color: red;
+  margin-left: 50px;
 }
 
-#seventeen {
-  display: none;
+.total {
+  font-style: italic;
 }
 
-#show-cart {
-  display: none;
+.btn {
+  margin-left: 80px;
 }

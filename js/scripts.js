@@ -17,7 +17,6 @@ Order.prototype.checkoutTotal = function () {
   } else if (this.pizzaSize === "large") {
     this.cartTotal += 16;
   };
-
   if (this.pizzaToppings.includes("pepperoni")) {
     this.cartTotal += 1;
   } if (this.pizzaToppings.includes("sausage")) {
@@ -33,14 +32,16 @@ Order.prototype.checkoutTotal = function () {
 $(document).ready(function () {
   $("#pizzaParlor").submit(function (event) {
     event.preventDefault();
+    
     const pizzaSizeChoice = $("input:radio[name=pizza-size]:checked").val();
     let pizzaToppingsChoice = [];
     let newOrder = new Order(pizzaSizeChoice, pizzaToppingsChoice);
+    
     $("input:checkbox[name=pizza-toppings]:checked").each(function () {
       let toppingChoice = $(this).val();
       newOrder.topping(toppingChoice);
     });
-    $("span.cartTotal").html(finalOrder.checkoutTotal());
+    $("span.cartTotal").html(newOrder.checkoutTotal());
   });
 });
 
