@@ -1,8 +1,6 @@
 ## **Pizza Parlor**
 
 
-# **CURRENTLY DOES NOT WORK** 
-
 ## Built to allow user to input toppings and pizza size desired and return a total price 
 
 #### *By: _Alan Call_*
@@ -53,7 +51,7 @@ Pizza Parlor is a mock website that allows a user to build a pizza. The user can
 
 ## Known Bugs
 
-- DOES NOT WORK
+- None
 
 ## License
 

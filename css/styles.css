@@ -1,16 +1,30 @@
 .name {
   margin-top: 50px;
+  font-family: 'Marck Script', cursive;
 }
 
 h3 {
   color: red;
-  margin-left: 50px;
+  margin-left: px;
 }
 
 .total {
-  font-style: italic;
+  font-style: italic;;
 }
 
 .btn {
-  margin-left: 80px;
+  margin-left: px;
+}
+
+input {
+  margin-left: 100px;
+}
+
+.imgs {
+  width: 300px;
+  padding: 50px;
+}
+
+body {
+  background-color: yellow;
 }

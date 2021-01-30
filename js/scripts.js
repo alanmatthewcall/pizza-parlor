@@ -19,7 +19,7 @@ Order.prototype.checkoutTotal = function () {
   };
   if (this.pizzaToppings.includes("pepperoni")) {
     this.cartTotal += 1;
-  } if (this.pizzaToppings.includes("sausage")) {
+  } if (this.pizzaToppings.includes("garlic")) {
     this.cartTotal += 1;
   };
   return this.cartTotal;
@@ -31,8 +31,6 @@ Order.prototype.checkoutTotal = function () {
 
 $(document).ready(function () {
   $("#pizzaParlor").submit(function (event) {
-    event.preventDefault();
-    
     const pizzaSizeChoice = $("input:radio[name=pizza-size]:checked").val();
     let pizzaToppingsChoice = [];
     let newOrder = new Order(pizzaSizeChoice, pizzaToppingsChoice);
@@ -42,7 +40,9 @@ $(document).ready(function () {
       newOrder.topping(toppingChoice);
     });
     $("span.cartTotal").html(newOrder.checkoutTotal());
+    event.preventDefault();
   });
 });
+    
 
 
