@@ -23,17 +23,13 @@ Describe: Order()
   Expect(myOrder).toEqual(Order{});
 
   Test: 'It takes a size arguement and constructs an object with the same property of it's value'
-  Expect(myOrder).toEqual(Order {firstName: "Alan", lastName: "Call", pizzaSize: "Large"});
+  Expect(myOrder).toEqual(Order {pizzaSize: "Large"});
 
   Test: 'It takes a toppings arguement and constructs an object with the same property of it's value'
-  Expect(myOrder).toEqual(Order {firstName: "Alan", lastName: "Call", pizzaSize: "Large", pizzaToppings: "Pepperoni"});
+  Expect(myOrder).toEqual(Order {pizzaSize: "Large", pizzaToppings: "Pepperoni"});
 
   Test: 'It takes a cartTotal arguement and constructs an object with the same property of it's value'
-  Expect(myOrder).toEqual(Order {firstName: "Alan", lastName: "Call", pizzaSize: "Large", pizzaToppings: "Pepperoni", cartTotal: 19.00});
-
-Describe: checkoutTotal()
-  Test: 'It takes the user input and displays a checkoutTotal'
-  Expect(myOrder.cartTotal("19.00").toEqual("Your Total Is $20.00");
+  Expect(myOrder).toEqual(Order {pizzaSize: "Large", pizzaToppings: "Pepperoni", cartTotal: 18.00});
 
 ```
 

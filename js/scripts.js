@@ -1,4 +1,3 @@
-
 //Buiness Logic
 
 function Order(pizzaSize, pizzaToppings) {
@@ -25,8 +24,6 @@ Order.prototype.checkoutTotal = function () {
   return this.cartTotal;
 };
 
-
-
 // UI Logic
 
 $(document).ready(function () {
@@ -34,7 +31,6 @@ $(document).ready(function () {
     const pizzaSizeChoice = $("input:radio[name=pizza-size]:checked").val();
     let pizzaToppingsChoice = [];
     let newOrder = new Order(pizzaSizeChoice, pizzaToppingsChoice);
-    
     $("input:checkbox[name=pizza-toppings]:checked").each(function () {
       let toppingChoice = $(this).val();
       newOrder.topping(toppingChoice);
@@ -43,6 +39,6 @@ $(document).ready(function () {
     event.preventDefault();
   });
 });
-    
+
 
 

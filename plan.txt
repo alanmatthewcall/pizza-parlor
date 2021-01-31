@@ -1,3 +1,5 @@
+This is the initial plan. I've since simplified my website to ensure it were working by the deadline.
+
 PIZZA-PARLOR
 
 Buisness name/pizza constructor object (ORDER)

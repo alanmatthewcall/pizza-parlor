@@ -15,32 +15,33 @@
   <div class="container">
     <center>
       <h1 class="name">Andys Pizza</h1>
-      <img class="imgs" src="imgs/File_000-3.jpeg" alt="photo">
+      <img class="imgs" src="imgs/pizza img.webp" alt="photo">
     </center>
-    <center><form id="pizzaParlor">
-      <div class="order-entry">
-        <div class="radio">
-          <label>
-            <input class="selector" type="radio" name="pizza-size" value="large" checked>
-            <h3>Large $16</h3>
-            <input class="selector" type="radio" name="pizza-size" value="small" checked>
-            <h3>Small $12</h3>
-          </label>
+    <center>
+      <form id="pizzaParlor">
+        <div class="order-entry">
+          <div class="radio">
+            <label>
+              <input class="selector" type="radio" name="pizza-size" value="large" checked>
+              <h3>Large $16</h3>
+              <input class="selector" type="radio" name="pizza-size" value="small" checked>
+              <h3>Small $12</h3>
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input class="selector" type="checkbox" name="pizza-toppings" value="pepperoni">
+              <h3>Pepperoni $1</h3>
+              <input class="selector" type="checkbox" name="pizza-toppings" value="garlic">
+              <h3>Garlic $1</h3>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-danger">Total</button>
         </div>
-        <div class="checkbox">
-          <label>
-            <input class="selector" type="checkbox" name="pizza-toppings" value="pepperoni">
-            <h3>Pepperoni $1</h3>
-            <input class="selector" type="checkbox" name="pizza-toppings" value="garlic">
-            <h3>Garlic $1</h3>
-          </label>
+        <div>
+          <h3 class="total">Order Total: $<span class="cartTotal"></span></h3>
         </div>
-        <button type="submit" class="btn btn-danger">Total</button>
-      </div>
-      <div>
-        <h3 class="total">Order Total: $<span class="cartTotal"></span></h3>
-      </div>
-    </form>
+      </form>
     </center>
   </div>
 </body>

@@ -1,6 +1,7 @@
 .name {
   margin-top: 50px;
   font-family: 'Marck Script', cursive;
+  font-size: 100px;
 }
 
 h3 {
@@ -21,10 +22,15 @@ input {
 }
 
 .imgs {
-  width: 300px;
+  width: 500px;
   padding: 50px;
+  border-radius: 75%; 
 }
 
 body {
   background-color: yellow;
 }
+
+
+
+
